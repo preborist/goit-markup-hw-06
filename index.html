@@ -621,11 +621,17 @@
             ></use>
           </svg>
         </div>
-        <textarea
-          name="user-modal-message"
-          class="modal-form-message"
-          placeholder="Комментарий"
-        ></textarea>
+        <div class="modal-form-input-wrapper">
+          <textarea
+            id="user-message"
+            name="user-message"
+            class="modal-form-message"
+            placeholder=" "
+          ></textarea>
+          <label for="user-message" class="modal-form-message-label"
+            >Комментарий</label
+          >
+        </div>
         <label class="modal-form-option-label">
           <input
             type="checkbox"

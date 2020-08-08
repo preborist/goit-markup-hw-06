@@ -811,7 +811,8 @@ p {
   padding-left: 16px;
 }
 
-.modal-form-label {
+.modal-form-label,
+.modal-form-message-label {
   position: absolute;
   top: 50%;
   left: 0;
@@ -823,8 +824,16 @@ p {
   transition: all var(--transition-time) var(--cubic-bezier);
 }
 
+.modal-form-message-label {
+  margin-left: 0;
+  top: 25px;
+  left: 16px;
+}
+
 .modal-form-input:focus + .modal-form-label,
-.modal-form-input:not(:placeholder-shown) + .modal-form-label {
+.modal-form-input:not(:placeholder-shown) + .modal-form-label,
+.modal-form-message:focus + .modal-form-message-label,
+.modal-form-message:not(:placeholder-shown) + .modal-form-message-label {
   top: -20px;
   left: 0;
   margin-left: 16px;
@@ -848,7 +857,7 @@ p {
   border: 1px solid var(--accent-color);
 }
 
-.modal-form-message:focus::placeholder {
+.modal-form-message:focus + .modal-form-message-label {
   color: var(--accent-color);
   transition: all var(--transition-time) var(--cubic-bezier);
 }
